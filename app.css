@@ -1,0 +1,32 @@
+#ytrt-container {
+  float: right;
+}
+
+#ytrt-critic, #ytrt-audience {
+  display: inline-block;
+  margin: 0 3px;
+  width: 12px;
+  height: 12px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+#ytrt-critic {
+  background-image: url('chrome-extension://fdgfhbgfhgfihhjgkahhhjmlmbpaccab/img/tomatoe.png');
+}
+
+#ytrt-audience {
+  margin-left: 5px;
+  background-image: url('chrome-extension://fdgfhbgfhgfihhjgkahhhjmlmbpaccab/img/popcorn.png');
+}
+
+.ytrt-percentage {
+  font-size: 85%;
+}
+
+.ytrt-score {
+  font-size: 60%;
+  font-family: Roboto;
+  -webkit-font-smoothing: antialiased;
+}

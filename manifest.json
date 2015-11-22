@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "YouTube Rotten Tomatoes",
+  "description": "View Rotten Tomatoes scores on YouTube trailers!",
+  "version": "1.0",
+
+  "content_scripts": [{
+    "matches": ["http://youtube.com/*", "https://youtube.com/*", "http://www.youtube.com/*", "https://www.youtube.com/*"],
+    "css": ["app.css"],
+    "js": ["jquery-2.1.4.min.js", "ytrt.page.js"],
+    "run_at": "document_end"
+  }],
+
+  "permissions": [ "https://*.google.com/*", "https://www.rottentomatoes.com/*"],
+  "content_security_policy": "script-src 'self' https://www.google.com; object-src 'self'",
+
+  "web_accessible_resources": ["img/tomatoe.png", "img/popcorn.png"]
+}
