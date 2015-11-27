@@ -1,24 +1,35 @@
 #ytrt-container {
   float: right;
+  background: rgba(256, 256, 256, 0.5);
+  border-radius: 3px;
 }
 
-#ytrt-critic, #ytrt-audience {
+.ytrt-icon {
   display: inline-block;
   margin: 0 3px;
-  width: 12px;
-  height: 12px;
+  width: 15px;
+  height: 15px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
 }
 
 #ytrt-critic {
-  background-image: url('chrome-extension://fdgfhbgfhgfihhjgkahhhjmlmbpaccab/img/tomatoe.png');
+  background-image: url('chrome-extension://pnhnpfanenbhdkkmigmcmelkgbjkoaoo/img/tomatoe.png');
+}
+
+#ytrt-critic-splat {
+  background-image: url('chrome-extension://pnhnpfanenbhdkkmigmcmelkgbjkoaoo/img/splat.png');
 }
 
 #ytrt-audience {
   margin-left: 5px;
-  background-image: url('chrome-extension://fdgfhbgfhgfihhjgkahhhjmlmbpaccab/img/popcorn.png');
+  background-image: url('chrome-extension://pnhnpfanenbhdkkmigmcmelkgbjkoaoo/img/popcorn.png');
+}
+
+#ytrt-audience-spill {
+  margin-left: 5px;
+  background-image: url('chrome-extension://pnhnpfanenbhdkkmigmcmelkgbjkoaoo/img/spill.png');
 }
 
 .ytrt-percentage {
@@ -26,7 +37,38 @@
 }
 
 .ytrt-score {
+  display: inline-block;
+  vertical-align: middle;
   font-size: 60%;
   font-family: Roboto;
   -webkit-font-smoothing: antialiased;
+}
+
+.ytrt-spinner {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  margin: 3px;
+  position: relative;
+  -webkit-animation: rotate .8s infinite linear;
+  -moz-animation: rotate .8s infinite linear;
+  animation: rotate .8s infinite linear;
+  border: 1px solid rgb(230, 23, 33);
+  border-right-color: transparent;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes rotate {
+  0%    { transform: rotate(0deg); }
+  100%  { transform: rotate(360deg); }
+}
+
+@-moz-keyframes rotate {
+  0%    { transform: rotate(0deg); }
+  100%  { transform: rotate(360deg); }
+}
+
+@keyframes rotate {
+  0%    { transform: rotate(0deg); }
+  100%  { transform: rotate(360deg); }
 }
